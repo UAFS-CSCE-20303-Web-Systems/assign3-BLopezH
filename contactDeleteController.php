@@ -6,17 +6,21 @@
     //************************
     showErrors(0);  //1 - Turn on Error Display
 
-   // $method=$_SERVER['REQUEST_METHOD'];
-   // //* Process HTTP GET Request
-   // if($method=='GET'){
+    $method=$_SERVER['REQUEST_METHOD'];
+    //* Process HTTP GET Request
+    if($method=='GET'){
+        $contactID = $_GET['contactID'];
         $contactDAO = new ContactDAO();
-        $contactDAO->deleteContact(6);
-   // }
+        $contactDAO->deleteContact($contactID);
+
+        header('Location: contactListController.php');
+        exit;
+    }
     
     //* Process HTTP POST Request
-   // if($method=='POST'){
-
-   // }
+    //if($method=='POST'){
+        
+    //}
    
 
     function showErrors($debug){
