@@ -23,9 +23,9 @@
                         <p class="card-text">Update existing contact on the list.</p>
                         <form action="contactUpdateController.php" method="POST">
                             <label for="username" class="form-label">Username</label>
-                            <input type="text" class="form-control mb-3" id="username" name="username" placeholder="Enter your Username" required>
+                            <input type="text" class="form-control mb-3" id="username" name="username" value="<?php echo $contact->username ?>" required>
                             <label for="email" class="form-label">Email</label>
-                            <input type="text" class="form-control mb-3" id="email" name="email" placeholder="Enter your Email Address" required>
+                            <input type="text" class="form-control mb-3" id="email" name="email" value="<?php echo $contact->email ?>" required>
                             <button type="submit" class="btn btn-primary">Submit</button>
                         </form>
                     </div>
